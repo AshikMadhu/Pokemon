@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+        url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"),
+        url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"),
+        url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"),
+        url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png");
+    background-repeat: no-repeat;
+    background-position:
+        center,
+        10% 20%,
+        90% 20%,
+        15% 80%,
+        85% 75%;
+    background-size:
+        cover,
+        120px,
+        140px,
+        110px,
+        130px;
+    animation: floatBg 10s infinite alternate ease-in-out;
+}
+
+@keyframes floatBg {
+    0% {
+        background-position:
+            center,
+            10% 20%,
+            90% 20%,
+            15% 80%,
+            85% 75%;
+    }
+    100% {
+        background-position:
+            center,
+            12% 25%,
+            88% 18%,
+            18% 78%,
+            82% 72%;
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: white;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 12px;
+    width: 220px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ffcb05, #ff5733);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 203, 5, 0.7);
+}
+
+img {
+    margin-top: 20px;
+    width: 180px;
+    display: none;
+    transition: transform 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
